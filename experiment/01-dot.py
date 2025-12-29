@@ -5,12 +5,12 @@ from pylab import mpl
 import os
 
 # 创建输出目录
-output_dir = "dot_results"
+output_dir = "experiment/01-dot_results"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # 图片反转
-img = cv2.imread("../pics/moulengdangubulei.jpg",0)
+img = cv2.imread("/home/haoboyang/Python_CV_Lesson/pics/moulengdangubulei.jpg",0)
 img_neg = 255 - img
 
 plt.figure(figsize=(10, 5))

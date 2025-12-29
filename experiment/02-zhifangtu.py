@@ -24,7 +24,7 @@ def def_equalizehist(img,L=256):
 
     equal_hist = np.zeros(sum_hist.shape, dtype=np.uint8)
     for i in range(256):
-        equal_hist[i] = int(((L-1)-0)*float(sum_hist[i]))
+        equal_hist[i] = int(((L-1)-0)*float(sum_hist[i].item()))
 
     equal_img = img.copy()
     for i in range(h):
@@ -36,7 +36,7 @@ def def_equalizehist(img,L=256):
     return [equal_img,equal_hist]
 
 if __name__=='__main__':
-    img = "../pics/moulengdangubulei.jpg"
+    img = "/home/haoboyang/Python_CV_Lesson/pics/moulengdangubulei.jpg"
     sys_img, sys_hist = sys_equalizehist(img)
     def_img, def_hist = def_equalizehist(img)
     x = np.linspace(0, 255, 256)  # 创建x轴坐标数据
