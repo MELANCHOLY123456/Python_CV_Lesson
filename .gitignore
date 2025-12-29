@@ -1,1 +1,7 @@
 /.idea
+mnist
+0_intro.py
+dot.py
+mnist.py
+network.py
+test.py

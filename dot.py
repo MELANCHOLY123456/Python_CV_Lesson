@@ -20,7 +20,7 @@ def reverse_transform(image_path, output_path):
     reversed_image = Image.fromarray(reversed_array.astype(np.uint8))
 
     # 保存原始图像和反转后的图像
-    image.save('original_image.jpg')
+    image.save('pics/original_image.jpg')
     reversed_image.save(output_path)
     print(f"Original image saved to original_image.jpg")
     print(f"Reverse transformed image saved to {output_path}")
@@ -51,8 +51,8 @@ def logarithmic_transform(image_path, output_path, c=1.0):
 # 使用示例
 if __name__ == "__main__":
     input_image_path = 'pics/moulengdangubulei.jpg'  
-    output_reverse_path = 'reverse_transformed_image.jpg'
-    output_logarithmic_path = 'logarithmic_transformed_image.jpg'
+    output_reverse_path = 'pics/reverse_transformed_image.jpg'
+    output_logarithmic_path = 'pics/logarithmic_transformed_image.jpg'
 
     reverse_transform(input_image_path, output_reverse_path)
     logarithmic_transform(input_image_path, output_logarithmic_path)
